@@ -28,6 +28,28 @@ Para instalar as dependências do projeto, execute:
 pip install -r requirements.txt
 ```
 
+## Estrutura do projeto 
+
+```bash
+├── assets
+│   └── data_schema.png
+├── database
+│   ├── olist_customers_dataset.csv
+│   ├── olist_geolocation_dataset.csv
+│   ├── olist_order_items_dataset.csv
+│   ├── olist_order_payments_dataset.csv
+│   ├── olist_order_reviews_dataset.csv
+│   ├── olist_orders_dataset.csv
+│   ├── olist_products_dataset.csv
+│   ├── olist_sellers_dataset.csv
+│   └── product_category_name_translation.csv
+├── enunciado.pdf
+├── notebook_projeto.ipynb
+├── notebook_storytelling.ipynb
+├── README.md
+├── requirements.txt
+```
+
 ## [Dataset Publico do E-Commerce no Brasil feito pela Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 Este é um conjunto de dados públicos de um ecommerce brasileiro com pedidos feitos na Olist Store. O conjunto de dados contém informações sobre 100 mil pedidos realizados entre 2016 e 2018 em diversos marketplaces no Brasil. Suas características permitem visualizar um pedido a partir de várias dimensões: desde o status do pedido, preço, pagamento e desempenho do frete até a localização do cliente, atributos do produto e, finalmente, as avaliações escritas pelos clientes. Também liberamos um conjunto de dados de geolocalização que relaciona os códigos postais brasileiros com coordenadas de latitude/longitude.
 
