@@ -12,14 +12,6 @@ _Este projeto consiste no trabalho final de Estatística I da trilha de Data Sci
     - Mileno Epifânio ([GitHub](https://github.com/milenoepifanio) / [LinkedIn](https://www.linkedin.com/in/milenoepifanio/));
     - Mille Amorin ([GitHub](https://github.com/4m0r1m) / [LinkedIn](https://www.linkedin.com/in/mille-amorim/));
 
-## Dependências 
-
-Para instalar as dependências do projeto, execute:
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Instalação 
 
 1. Clone o repositório:
@@ -28,10 +20,34 @@ pip install -r requirements.txt
 git clone https://github.com/marqsleal/estatistica-um-projeto
 ```
 
-2. Execute o arquivo ``:
+## Dependências 
+
+Para instalar as dependências do projeto, execute:
 
 ```bash
-python3 
+pip install -r requirements.txt
+```
+
+## Estrutura do projeto 
+
+```bash
+├── assets
+│   └── data_schema.png
+├── database
+│   ├── olist_customers_dataset.csv
+│   ├── olist_geolocation_dataset.csv
+│   ├── olist_order_items_dataset.csv
+│   ├── olist_order_payments_dataset.csv
+│   ├── olist_order_reviews_dataset.csv
+│   ├── olist_orders_dataset.csv
+│   ├── olist_products_dataset.csv
+│   ├── olist_sellers_dataset.csv
+│   └── product_category_name_translation.csv
+├── enunciado.pdf
+├── notebook_projeto.ipynb
+├── notebook_storytelling.ipynb
+├── README.md
+├── requirements.txt
 ```
 
 ## [Dataset Publico do E-Commerce no Brasil feito pela Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
@@ -47,34 +63,15 @@ Após um cliente comprar o produto na Olist Store, o vendedor é notificado para
 ## Esquema de Dados
 ![Esquema de Dados](assets/data_schema.png)
 
-## Abordagem
-1. *Vendas por Produto e Categoria*:
-   - Quantidade de vendas por produto e categoria usando o `olist_products_dataset` e o `olist_order_items_dataset`.
-   - Receita gerada por produto cruzando o valor total de `olist_order_items_dataset` e `olist_order_payments_dataset`.
-   - Produtos mais vendidos e os menos vendidos ao longo do tempo.
+## Abordagem Técnica
+O arquivo `notebook_projeto.ipynb` faz uma análise tecnica dos datasets buscando responder:
 
-2. *Análise de Descontos e Ofertas*:
-   - Comparar preços de produtos antes e depois de descontos, se houver, para identificar produtos mais impactados por promoções (caso existam campos de preços com e sem desconto).
-   - Verificar o impacto de descontos em vendas e receitas.
+- Quais são as variáveis (colunas) neste conjunto de dados e qual é o tipo de cada uma?  
+- Há valores ausentes no conjunto de dados?
+- Qual é a estatística descritiva básica para as variáveis numéricas, como média, mediana, mínimo, máximo e desvio padrão?  
+- Como as variáveis numéricas estão distribuídas?  
+- Existe alguma correlação entre as variáveis numéricas?  
+- Como os dados categóricos estão distribuídos?
 
-3. *Performance de Vendedores*:
-   - Quais vendedores vendem mais ou menos, usando `olist_sellers_dataset` e `olist_order_items_dataset`.
-   - Receita média por vendedor e ticket médio por venda para entender a performance dos vendedores.
-   - Variação de vendas por vendedor ao longo do tempo.
-
-● Quais são as variáveis (colunas) neste conjunto de dados e qual é o tipo de cada uma?  
-● Há valores ausentes no conjunto de dados? Explique-os.  
-● Qual é a estatística descritiva básica para as variáveis numéricas, como média, mediana,  
-mínimo, máximo e desvio padrão?  
-● Como as variáveis numéricas estão distribuídas?  
-● Existe alguma correlação entre as variáveis numéricas?  
-● Como os dados categóricos estão distribuídos?
-
-## Resultados
-Lorem Ipsum
-
-## Conclusão
-Lorem Ipsum
-
-## Próximos Passos
-Lorem Ipsum
+## Abordagem Exploratória
+O arquivo `notebook_storytelling.ipynb` faz uma análise exploratória nos datasets buscando traçar alguma tendência do E-Commerce no Brasil, com foco nas formas de pagamento e nos pedidos.
